@@ -1,25 +1,63 @@
-import logo from './logo.svg';
+import { Outlet, NavLink, } from "react-router-dom";
 import './App.css';
+import styled from 'styled-components';
+import Form from "./components/Form";
 
-function App() {
+
+
+const Container = styled.div`
+display: flex;
+background-color: #FFF1AF;
+height: 70px;
+width: 100%;
+`;
+
+const Header = styled.h3`
+margin-left: 30px;
+color: #66806A;
+font-weight: bolder;
+`;
+
+const Btn = styled.button`
+font-size: 15px;
+background-color: #FFF1AF;
+height: 30px;
+border: none;
+color: #66806A;
+font-weight: bolder;
+`;
+
+export default function Navbar() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+       <Container>
+     <Header> BMI - VÜCUT KİTLE ENDEKSİ HESAPLAMA</Header>
+     <ul className="btnC">
+        <li>
+        <Btn className="btnS">
+          <NavLink exact to="/" >BMI Hesapla</NavLink> 
+        </Btn>
+        </li>
+        |{" "}
+        <li>
+        <Btn className="btnS">
+          <NavLink to="/bminedir">BMI Nedir</NavLink> 
+        </Btn>
+        </li>
+        |{" "}
+        <li>
+        <Btn className="btnS">
+          <NavLink to="/sonuclar">Sonuclarınız</NavLink>
+        </Btn>
+        </li>
+      </ul>
+   </Container>
 
-export default App;
+   <Outlet />
+   <Form></Form>   
+
+   </>
+  );
+    
+
+};
