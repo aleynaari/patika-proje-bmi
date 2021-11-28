@@ -1,0 +1,31 @@
+[
+    {
+        "id":1,
+        "Kategori":"Zayıf",
+        "Boy Kilo Endeksi - kg/m2":"< 18.5"
+    },
+    {
+        "id":2,
+        "Kategori":"Normal",
+        "Boy Kilo Endeksi - kg/m2":"18,5 - 24,9"
+
+    },
+    {
+        "id":3,
+        "Kategori":"Fazla Kilolu",
+        "Boy Kilo Endeksi - kg/m2":"25 - 29,9"
+
+    },
+    {
+        "id":4,
+        "Kategori":"Şişman",
+        "Boy Kilo Endeksi - kg/m2":"30 - 34,9"
+
+    },
+    {
+        "id":5,
+        "Kategori":"Aşırı Şişman",
+        "Boy Kilo Endeksi - kg/m2":"35 <"
+
+    }
+]
