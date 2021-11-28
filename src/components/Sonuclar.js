@@ -1,37 +1,47 @@
 import styled from 'styled-components'
+import { useState } from 'react';
+import "../css/App.css"
 
 const Container = styled.div`
 background-color: #B4C6A6;
 margin: 0 auto;
-height: 250px;
-width: 450px;
+min-height: 200px;
+width: 600px;
+margin-top: 120px;
 `;
 const Baslik = styled.h3`
 text-align: center;
 `;
-const BtnTemizle = styled.button`
-display: block;
-margin: 0 auto;
-background-color: #FFF1AF;
-color: #66806A;
-font-weight: bold;
-height: 30px;
-border-radius: 5px;
-`;
 
 export default function Sonuclar() {
+  const [removeItem, setRemoveItem] = useState(false)
+  const clearStorage = () => {
+    localStorage.removeItem("bmiData");
+    setRemoveItem(true);
+  }
+
     return (
       <Container>
         <Baslik>
           Sonuçlarınız
         </Baslik>
-        <br></br>
-        <br></br>
-        <br></br>
-  
-        <BtnTemizle>
-          Sonuçları Temizle
-        </BtnTemizle>
+        <table id="kayit">
+                <tbody>
+                    <tr>
+                    <th>Ad Soyad</th>
+                    <th>BMI Sonucunuz</th>
+                    </tr>
+                    {( localStorage.getItem("bmiData")) && JSON.parse(localStorage.getItem("bmiData")).map(data =>
+                    <tr>
+                    <td>{data.adsoyad}</td>
+                    <td>{data.resultBmi}</td>
+                    </tr>
+                    )}
+                </tbody>
+            </table>
+          <br />  
+        <input type="button" id="btnTemizle" value="Sonuçları Temizle" onClick={clearStorage} />
+        <br />  
       </Container>
     );
 }
