@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
+
 const Container = styled.div`
 background-color: #e3ebde;
 width: 1200px;
 margin: 0 auto;
+margin-top: 70px;
 `;
 const Baslik = styled.h3`
 text-indent: 10px;
@@ -11,12 +13,11 @@ text-indent: 10px;
 const Icerik = styled.p`
 margin-left: 60px;
 `;
-const Tablo = styled.table`
-border-collapse: collapse;
-margin-left: 55px;
-`;
+
 
 export default function Bminedir() {
+  //  const [contacts, setContacts] = useState(data);
+  
     return (
       <Container>
         <Baslik>
@@ -40,9 +41,40 @@ export default function Bminedir() {
         <Baslik>
           Boy Kilo Endeksi Tablosu
         </Baslik>
-        <Tablo>
-        </Tablo>
+        <div>
+        
+        <table className="bmiTablo2">
+          <thead>
+            <tr>
+              <th>Kategori</th>
+              <th>Boy Kilo Endeksi - kg/m2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Zayıf</td>
+              <td> 0 - 18,5 </td>
+            </tr>
+            <tr>
+              <td>Normal</td>
+              <td> 18,5 - 24,9 </td>
+            </tr>
+            <tr>
+              <td>Fazla Kilolu</td>
+              <td> 25 - 29,9 </td>
+            </tr>
+            <tr>
+              <td>Şişman</td>
+              <td> 30 - 34,9 </td>
+            </tr>
+            <tr>
+              <td>Aşırı Şişman</td>
+              <td> 35 + </td>
+            </tr>
+          </tbody>
 
+        </table>
+        </div>
         <Baslik>
           Vücut Kitle Endeksi Değeri Ne Anlama Gelir?
         </Baslik>
