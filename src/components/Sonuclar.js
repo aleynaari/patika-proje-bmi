@@ -14,7 +14,7 @@ text-align: center;
 `;
 
 export default function Sonuclar() {
-  const [setRemoveItem] = useState(false)
+  const [removeItem, setRemoveItem] = useState(false)
   const clearStorage = () => {
     localStorage.removeItem("bmiData");
     setRemoveItem(true);
