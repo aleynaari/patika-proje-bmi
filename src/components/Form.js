@@ -41,7 +41,6 @@ export default function Form() {
     console.log(form);
 
     let bmi = Number(form.kilo / (form.boy / 100) ** 2).toFixed(2);
-    //setbmiForm(bmi); 
     setresultBmi(bmi);
     console.log(bmi);
     let bmiData = JSON.parse(localStorage.getItem('bmiData')) || [];

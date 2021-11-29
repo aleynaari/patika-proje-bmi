@@ -16,8 +16,6 @@ margin-left: 60px;
 
 
 export default function Bminedir() {
-  //  const [contacts, setContacts] = useState(data);
-  
     return (
       <Container>
         <Baslik>

@@ -7,7 +7,6 @@ import Sonuclar from "./components/Sonuclar";
 import Bminedir from "./components/Bminedir";
 import Form from "./components/Form";
 import Nav from "./components/Nav";
-//import Listele from './components/index';
 
 export default function App() {
 return (
