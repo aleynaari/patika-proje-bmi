@@ -31,7 +31,7 @@ export default function Sonuclar() {
                     <th>Ad Soyad</th>
                     <th>BMI Sonucunuz</th>
                     </tr>
-                    {( localStorage.getItem("bmiData")) && JSON.parse(localStorage.getItem("bmiData")).map(data =>
+                    {( !removeItem && localStorage.getItem("bmiData")) && JSON.parse(localStorage.getItem("bmiData")).map(data =>
                     <tr>
                     <td>{data.adsoyad}</td>
                     <td>{data.resultBmi}</td>
