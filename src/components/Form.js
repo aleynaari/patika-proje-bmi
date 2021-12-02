@@ -86,7 +86,7 @@ export default function Form() {
         <button id="btnHesapla">Hesapla</button>
         </form>
         <hr></hr> 
-        <div style={{marginLeft: "15px"}}>
+        <div style={{marginLeft: "15px", fontWeight: "bolder"}}>
         Sonucunuz: {resultBmi} 
         </div>
       </Container>
